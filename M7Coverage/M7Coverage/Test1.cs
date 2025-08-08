@@ -4,7 +4,7 @@ using StaticAnalysis;
 namespace M7Coverage
 {
     [TestClass]
-    public sealed class Test1
+    public sealed class ThreadTests
     {
         LoginService loginService = new LoginService();
 
