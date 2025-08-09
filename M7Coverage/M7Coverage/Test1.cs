@@ -8,14 +8,22 @@ namespace M7Coverage
     {
         LoginService loginService = new LoginService();
 
-        //[TestMethod]
-        //public void Sumar_DosNumeros_RetornaCorrecto()
-        //{
-        //    var calc = new Calculadora();
-        //    int resultado = calc.Sumar(3, 2);
+        [TestMethod]
+        public void Sumar_DosNumeros_RetornaCorrecto()
+        {
+            //Arrange
+            var calc = new GeneralLibrary.Calculadora();
+            var value1 = 3;
+            var value2 = 2;
+            int expectedResult = 5;
+            int actualResult;
 
-        //    Assert.AreEqual(5, resultado);
-        //}
+            //Act
+            actualResult = calc.Sumar(value1, value2);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
         //[TestMethod]
         //public void EvaluarNumero_NumeroPositivo_DeberiaRetornarPositivo()
